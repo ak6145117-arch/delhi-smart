@@ -1,0 +1,202 @@
+:root {
+    --bg-dark: #020408;
+    --card-bg: #0a0f19;
+    --neon-blue: #00f2ff;
+    --neon-pink: #ff0055;
+    --text-dim: #94a3b8;
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    cursor: none; /* Custom cursor handle karega ise */
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --- UI Enhancements (Universal) --- */
+.cursor {
+    width: 15px; height: 15px; border: 2px solid var(--neon-blue);
+    border-radius: 50%; position: fixed; pointer-events: none;
+    z-index: 10000; box-shadow: 0 0 15px var(--neon-blue);
+    transition: transform 0.1s ease;
+}
+
+.grid-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px; z-index: -1;
+}
+
+.blob-glow {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(0, 242, 255, 0.05), transparent);
+    z-index: -2;
+}
+
+/* --- Navbar (Universal) --- */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.5rem 8%; background: rgba(2, 4, 8, 0.9);
+    backdrop-filter: blur(20px); position: fixed; width: 100%; top: 0; z-index: 1000;
+    border-bottom: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+.logo { font-size: 1.5rem; font-weight: 800; color: #fff; letter-spacing: 2px; }
+.logo span { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a { text-decoration: none; color: var(--text-dim); transition: 0.3s; font-size: 0.9rem; font-weight: 600; }
+.nav-links a:hover { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+
+/* --- Hero Section --- */
+.hero { height: 60vh; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px; }
+.glitch { font-size: 4rem; font-weight: 800; position: relative; }
+.glitch span { color: var(--neon-blue); text-shadow: 0 0 20px rgba(0, 242, 255, 0.5); }
+.hero-content p { color: var(--text-dim); max-width: 700px; margin: 1.5rem auto; font-size: 1.1rem; line-height: 1.6; }
+
+/* --- Advanced Snake Border Card --- */
+.card-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem; padding: 4rem 8%;
+}
+
+.glass-card-advanced {
+    background: var(--card-bg);
+    padding: 2.5rem; border-radius: 15px; position: relative;
+    overflow: hidden; z-index: 1; border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card-advanced::before {
+    content: ''; position: absolute; top: -50%; left: -50%;
+    width: 200%; height: 200%;
+    background: conic-gradient(transparent, transparent, var(--neon-blue), transparent);
+    animation: rotate-border 6s linear infinite; z-index: -2;
+}
+
+.glass-card-advanced::after {
+    content: ''; position: absolute; inset: 2px;
+    background: var(--card-bg); border-radius: 13px; z-index: -1;
+}
+
+@keyframes rotate-border {
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Detail & Growth Page Specific Layout (UPDATED) --- */
+.detail-container { padding-top: 80px; }
+
+.detail-section {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 4rem; padding: 5rem 8%; border-bottom: 1px solid rgba(0, 242, 255, 0.05);
+    min-height: 500px; /* Consistency ke liye */
+}
+
+.detail-section:nth-child(even) { flex-direction: row-reverse; }
+
+.text-side { flex: 1.2; }
+
+/* Perfect Photo Size Handling */
+.image-side { 
+    flex: 0.8; 
+    position: relative; 
+    border-radius: 20px; 
+    overflow: hidden;
+    border: 2px solid rgba(0, 242, 255, 0.2); 
+    box-shadow: 0 0 40px rgba(0, 242, 255, 0.15);
+    background: var(--card-bg); 
+    padding: 10px;
+    width: 100%;
+    max-width: 500px; 
+    height: 400px; /* Fixed Height for all tactics */
+}
+
+.image-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Photo stretch nahi hogi, perfectly fill karegi */
+    border-radius: 12px;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.image-side img:hover {
+    transform: scale(1.1); /* Smooth zoom */
+}
+
+/* Glow effect over images */
+.image-side::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(45deg, rgba(0, 242, 255, 0.1), transparent);
+    pointer-events: none;
+}
+
+.step-number { 
+    font-size: 0.9rem; color: var(--neon-pink); 
+    font-family: monospace; display: block; 
+    margin-bottom: 0.5rem; font-weight: bold; 
+    letter-spacing: 2px; 
+}
+
+.problem-text { 
+    color: var(--text-dim); font-size: 1.1rem; 
+    line-height: 1.8; margin-bottom: 1.5rem; 
+}
+
+.solution-box {
+    background: rgba(0, 242, 255, 0.03); 
+    border-left: 4px solid var(--neon-blue);
+    padding: 1.5rem; border-radius: 4px;
+}
+
+.solution-box h4 { 
+    color: var(--neon-blue); font-size: 0.9rem; 
+    text-transform: uppercase; margin-bottom: 10px; 
+}
+
+.solution-box ul { list-style: none; }
+.solution-box li { 
+    color: #fff; margin-bottom: 8px; font-size: 0.95rem; 
+    display: flex; align-items: flex-start; gap: 10px; 
+}
+
+.solution-box li::before { 
+    content: '▹'; color: var(--neon-blue); font-weight: bold; 
+}
+
+/* --- Buttons --- */
+.btn-glow {
+    padding: 1rem 2.5rem; background: var(--neon-blue); color: #000;
+    text-decoration: none; font-weight: 800; border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.3); transition: 0.3s;
+    display: inline-block;
+    border: none;
+}
+
+.btn-glow:hover { box-shadow: 0 0 40px var(--neon-blue); transform: scale(1.05); }
+
+/* --- Footer --- */
+footer { padding: 5rem 3rem; text-align: center; font-family: monospace; color: var(--neon-blue); opacity: 0.6; font-size: 0.8rem; }
+
+/* Responsive Adjustments */
+@media (max-width: 968px) {
+    .detail-section { 
+        flex-direction: column !important; 
+        text-align: center; 
+        padding: 4rem 5%; 
+        gap: 2rem;
+    }
+    .image-side { 
+        height: 300px; /* Mobile par thodi choti height */
+        max-width: 100%; 
+    }
+    .glitch { font-size: 2.5rem; }
+    .nav-links { display: none; }
+}

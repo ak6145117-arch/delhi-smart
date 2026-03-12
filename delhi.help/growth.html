@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Analytics | Delhi Smart</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="grid-overlay"></div>
+
+    <nav class="navbar">
+        <div class="logo">DELHI<span>ANALYTICS</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">DASHBOARD</a></li>
+            <li><a href="detail.html">18_POINTS</a></li>
+            <li><a href="#" class="btn-glow">LIVE_SYSTEM</a></li>
+        </ul>
+    </nav>
+
+    <div class="detail-container">
+        <header class="hero" style="height: 40vh;">
+            <div class="hero-content" data-aos="zoom-in">
+                <h1 class="glitch">Future <span>Projection.</span></h1>
+                <p>Data jhoot nahi bolta. Ye analytics dikhate hain ki kaise tera logic-based model Delhi ko India ka GDP powerhouse bana dega.</p>
+            </div>
+        </header>
+
+        <section class="detail-section" data-aos="fade-up">
+            <div class="text-side">
+                <span class="step-number">ECONOMY_METRIC_01</span>
+                <h2>Exponential GDP Growth</h2>
+                <p class="problem-text">Abhi Delhi ki economy inefficiencies aur traffic ki wajah se stuck hai. Smart model implement hote hi business cycle 24/7 chalega.</p>
+                <div class="solution-box">
+                    <h4>Economic Breakdown:</h4>
+                    <ul>
+                        <li><strong>Night Economy:</strong> 24/7 business hours se tax collection bina rate badhaye 3x ho jayega.</li>
+                        <li><strong>Asset Monetization:</strong> Bridges aur khali plots se aane wala rent seedha govt treasury mein jayega.</li>
+                        <li><strong>Efficiency Gain:</strong> Traffic jam khatam hone se fuel aur time ka waste paisa bank accounts mein rukega.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-side chart-container">
+                <canvas id="gdpChart"></canvas>
+            </div>
+        </section>
+
+        <section class="detail-section" data-aos="fade-up">
+            <div class="text-side">
+                <span class="step-number">SECURITY_METRIC_02</span>
+                <h2>Crime Inversion Tracker</h2>
+                <p class="problem-text">Snatching aur crime tab tak nahi rukte jab tak environment choron ke liye mushkil na ho jaye. Hamara model hiding spots hi khatam kar deta hai.</p>
+                <div class="solution-box" style="border-left-color: var(--neon-pink);">
+                    <h4>Safety Analytics:</h4>
+                    <ul>
+                        <li><strong>Prevention:</strong> AI cameras crime hone se pehle hi suspicious behavior detect karke unit bhej denge.</li>
+                        <li><strong>Escape Rate:</strong> High-speed interceptors ke hote hue criminal ka bhagna namumkin hai.</li>
+                        <li><strong>Trust Index:</strong> Jab log raat ko 2 baje bhi safe feel karenge, toh market spending badhegi.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-side chart-container">
+                <canvas id="crimeChart"></canvas>
+            </div>
+        </section>
+
+        <section class="detail-section" data-aos="fade-up">
+            <div class="text-side">
+                <span class="step-number">JOBS_METRIC_03</span>
+                <h2>Zero Unemployment Drive</h2>
+                <p class="problem-text">Naye sectors create karke hum youth ko skilled jobs provide karenge jo permanent aur high-paying hongi.</p>
+                <div class="solution-box" style="border-left-color: #00ff88;">
+                    <h4>Job Sectors:</h4>
+                    <ul>
+                        <li><strong>3-Shift Model:</strong> Ek hi dukan/office mein 3 alag logo ko jobs milengi shift change hone par.</li>
+                        <li><strong>Sustainability Jobs:</strong> Solar grid aur garbage brick plants mein 1.5 Lakh+ blue-collar jobs.</li>
+                        <li><strong>Smart Monitoring:</strong> AI systems aur drone patrolling ke liye technical staff ki demand badhegi.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-side chart-container">
+                <canvas id="jobChart"></canvas>
+            </div>
+        </section>
+
+        <section class="detail-section" data-aos="fade-up">
+            <div class="text-side">
+                <span class="step-number">ECOLOGY_METRIC_04</span>
+                <h2>The Green Restoration (AQI)</h2>
+                <p class="problem-text">Pollution sirf dhuaan nahi hai, ye logon ki life expectancy aur productivity kam karta hai. Hamara target AQI < 50 hai.</p>
+                <div class="solution-box">
+                    <h4>Eco Logic:</h4>
+                    <ul>
+                        <li><strong>Renewable Grid:</strong> Poore sheher ki lights aur transit solar power par shift hongi.</li>
+                        <li><strong>Zero Idle Traffic:</strong> Smooth flow ka matlab hai ki engines kam chalenge aur pollution 40% kam hoga.</li>
+                        <li><strong>Waste Repurposing:</strong> Kudhe ko jalane ke bajaye bricks banana toxicity ko zero karega.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-side chart-container">
+                <canvas id="aqiChart"></canvas>
+            </div>
+        </section>
+
+        <section class="detail-section" data-aos="fade-up">
+            <div class="text-side">
+                <span class="step-number">INFRA_METRIC_05</span>
+                <h2>Urban Efficiency Index</h2>
+                <p class="problem-text">Infrastructure tab smart hota hai jab wo apne aap ko sustain kare aur logon ka time bachaye.</p>
+                <div class="solution-box" style="border-left-color: #f39c12;">
+                    <h4>Infra Stats:</h4>
+                    <ul>
+                        <li><strong>Connectivity:</strong> Metro stations se EV shuttle har 2 minute mein availability.</li>
+                        <li><strong>Accountability:</strong> Contractor penalty law se roads hamesha naye jaisi rahengi.</li>
+                        <li><strong>Density Control:</strong> Abandoned plots ko use karke main roads par se load kam karna.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="image-side chart-container">
+                <canvas id="infraChart"></canvas>
+            </div>
+        </section>
+    </div>
+
+    <footer style="padding: 5rem 8%; text-align: center;">
+        <a href="index.html" class="btn-glow">BACK TO DASHBOARD</a>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const opt = { 
+            responsive: true, 
+            plugins: { legend: { labels: { color: '#fff' } } },
+            scales: { 
+                y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                x: { ticks: { color: '#94a3b8' }, grid: { display: false } }
+            }
+        };
+
+        // 1. GDP Chart
+        new Chart(document.getElementById('gdpChart'), {
+            type: 'line',
+            data: {
+                labels: ['2025', '2026', '2027', '2028'],
+                datasets: [
+                    { label: 'Current Delhi', data: [270, 290, 310, 330], borderColor: '#ff0055' },
+                    { label: 'Smart Delhi', data: [270, 480, 850, 1300], borderColor: '#00f2ff', fill: true, backgroundColor: 'rgba(0, 242, 255, 0.1)' }
+                ]
+            }, options: opt
+        });
+
+        // 2. Crime Chart
+        new Chart(document.getElementById('crimeChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Theft', 'Snatching', 'Drug Sales'],
+                datasets: [
+                    { label: 'Real Status', data: [95, 85, 70], backgroundColor: '#ff0055' },
+                    { label: 'Smart Logic', data: [10, 5, 2], backgroundColor: '#00f2ff' }
+                ]
+            }, options: opt
+        });
+
+        // 3. Job Chart
+        new Chart(document.getElementById('jobChart'), {
+            type: 'doughnut',
+            data: {
+                labels: ['Service', 'Tech', 'Maintenance'],
+                datasets: [{ data: [50, 25, 25], backgroundColor: ['#00f2ff', '#00ff88', '#ff0055'] }]
+            }, options: { plugins: { legend: { position: 'bottom', labels: { color: '#fff' } } } }
+        });
+
+        // 4. AQI Chart
+        new Chart(document.getElementById('aqiChart'), {
+            type: 'line',
+            data: {
+                labels: ['Nov', 'Dec', 'Jan', 'Feb'],
+                datasets: [
+                    { label: 'Current AQI', data: [480, 550, 500, 400], borderColor: '#ff0055' },
+                    { label: 'Smart AQI', data: [60, 80, 75, 50], borderColor: '#00ff88' }
+                ]
+            }, options: opt
+        });
+
+        // 5. Infra Efficiency
+        new Chart(document.getElementById('infraChart'), {
+            type: 'polarArea',
+            data: {
+                labels: ['Flow', 'Solar', 'Waste', 'Roads'],
+                datasets: [{ data: [95, 100, 92, 98], backgroundColor: ['#00f2ff', '#00ff88', '#ff0055', '#f39c12'] }]
+            }, options: { plugins: { legend: { display: false } } }
+        });
+
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>

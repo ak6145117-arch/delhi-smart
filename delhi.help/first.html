@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delhi Smart | Tactical City Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+<body>
+
+    <div class="cursor"></div>
+    <div class="grid-overlay"></div>
+    <div class="blob-glow"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fas fa-microchip"></i> DELHI<span>SMART</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#solutions">The Manifesto</a></li>
+            <li><a href="#" class="btn-glass">System Login</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content" data-aos="zoom-out" data-aos-duration="1200">
+            <span class="badge-advanced animate-pulse">
+                <i class="fas fa-satellite-dish"></i> Decentralized Governance v2.0
+            </span>
+            <h1 class="glitch" data-text="Logic Over Bureaucracy.">Logic Over <span>Bureaucracy.</span></h1>
+            <p>Sarkari tareeke fail ho chuke hain. Hum Delhi ko engineering, AI, aur logic se rebuild kar rahe hain. No rona-dhona, only solutions.</p>
+            <div class="hero-btns">
+                <a href="detail.html" class="btn-glow" target="_blank">
+                    <span>DEPLOY SOLUTIONS</span>
+                    <i class="fas fa-bolt"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="solutions">
+        <div class="section-header" data-aos="fade-right">
+            <h2 class="section-heading">Smart Solutions for Core Issues</h2>
+            <p>Actionable intelligence to transform the capital city.</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="glass-card-advanced" data-aos="fade-up">
+                <div class="card-tag status-critical">Priority 01</div>
+                <div class="card-icon red"><i class="fas fa-shield-halved"></i></div>
+                <h3>Z+ Tactical Patrol</h3>
+                <p>Police ko high-speed interceptors aur tactical authority dena. Night/Morning patrolling ko GPS-live track karna aur AI cameras se security upgrade karna.</p>
+                <div class="card-footer"><span>SYS: ENFORCEMENT_READY</span></div>
+            </div>
+
+            <div class="glass-card-advanced" data-aos="fade-up" data-aos-delay="100">
+                <div class="card-tag status-ai">Priority 02</div>
+                <div class="card-icon blue"><i class="fas fa-user-secret"></i></div>
+                <h3>Anti-Thief Grid</h3>
+                <p>Phone/Chain snatchers ke hiding spots ko destroy karna. Girls ki safety ke liye "Safe-Corridors" aur powerful patrolling units deploy karna.</p>
+                <div class="card-footer"><span>SYS: ZERO_CRIME_LOGIC</span></div>
+            </div>
+
+            <div class="glass-card-advanced" data-aos="fade-up" data-aos-delay="200">
+                <div class="card-tag status-tech">Priority 03</div>
+                <div class="card-icon orange"><i class="fas fa-city"></i></div>
+                <h3>Bridge-Gap Economy</h3>
+                <p>Abandoned buildings aur Bridge pillars ke gaps ko 24/7 small shops (kiosks) mein badalna. Illegal settlements ko shift karke economy generate karna.</p>
+                <div class="card-footer"><span>SYS: SPACE_OPTIMIZED</span></div>
+            </div>
+
+            <div class="glass-card-advanced" data-aos="fade-up" data-aos-delay="300">
+                <div class="card-tag status-live">Priority 04</div>
+                <div class="card-icon green"><i class="fas fa-bus-alt"></i></div>
+                <h3>Lane-Integrated Flow</h3>
+                <p>E-Rickshaws aur Buses ke liye fixed lanes. Food stalls/Sabji thelies ko unused "Waste Plots" mein shift karna taaki road 100% khali rahein.</p>
+                <div class="card-footer"><span>SYS: TRAFFIC_ALPHA</span></div>
+            </div>
+
+            <div class="glass-card-advanced" data-aos="fade-up" data-aos-delay="400">
+                <div class="card-tag status-funding">Priority 05</div>
+                <div class="card-icon brown"><i class="fas fa-cubes"></i></div>
+                <h3>Landfill to Infrastructure</h3>
+                <p>Kudhe ke pahado ko bricks mein convert karna. Har corner par solar lights compulsory karke grid load zero karna.</p>
+                <div class="card-footer"><span>SYS: CIRCULAR_WASTE</span></div>
+            </div>
+
+            <div class="glass-card-advanced" data-aos="fade-up" data-aos-delay="500">
+                <div class="card-tag status-critical">Priority 06</div>
+                <div class="card-icon red"><i class="fas fa-passport"></i></div>
+                <h3>Citizen Verification</h3>
+                <p>Illegal residents aur infiltration ko identify karke deport karna. Delhi ke resources sirf Indian citizens ke liye secure karna.</p>
+                <div class="card-footer"><span>SYS: BORDER_SHIELD</span></div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>TERMINAL LOG: DELHI_SMART_SYSTEMS_2026 // NO_RESTRICTIONS_APPLIED</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true });
+        
+        // Custom Cursor Logic
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
